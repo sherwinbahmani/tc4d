@@ -1,6 +1,6 @@
 # TC4D: Trajectory-Conditioned Text-to-4D Generation
 
-| [Project Page](https://sherwinbahmani.github.io/tc4d/) | [Paper](https://arxiv.org/abs/2311.17984) | [User Study Template](https://github.com/victor-rong/video-generation-study)|
+| [Project Page](https://sherwinbahmani.github.io/tc4d/) | [Paper](https://arxiv.org/abs/2311.17984) | [User Study Template](https://github.com/victor-rong/video-generation-study) |
 
 - **This code is forked from [threestudio](https://github.com/threestudio-project/threestudio).**
 
@@ -87,7 +87,7 @@ python launch.py --config configs/tc4d_stage_3_eval.yaml --test --gpu $gpu exp_r
 
 ## Memory Usage
 We tested our code on a A100 80 GB, but the memory can be reduced to 24 GB by adjusting following:
-- Reduce system.renderer.base_renderer.train_max_nums until it fits into memory. This reduces the number of sampled points which are part of the backpropagation
+- Reduce system.renderer.base_renderer.train_max_nums to fit into the given memory. This reduces the number of sampled points which are part of the backpropagation
 - Set system.guidance_video.low_ram_vae to a number between 1 and 16. This saves memory by only backpropagating through low_ram_vae number of frames instead of all 16.
 Note that the convergence speed can be slower when reducing these parameters, the quality should not degrade however.
 
