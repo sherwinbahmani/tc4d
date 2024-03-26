@@ -1,0 +1,49 @@
+name: "comp2"
+config_scene:
+  traj_kwargs:
+    # Object 0
+    -
+      proxy_size: [0.5, 0.5, 0.5]
+      trajs:
+        - traj_type: spline-trajectory
+          coords: [[0.30, 0.30, 0.5], [0.30, 0.70, 0.5]]
+          angle_offset: 0.
+    # Object 1
+    -
+      proxy_size: [0.5, 0.5, 0.5]
+      trajs:
+        - traj_type: spline-trajectory
+          coords: [[0.70, 0.70, 0.5], [0.70, 0.30, 0.5]]
+          angle_offset: 0.
+    # Object 2
+    -
+      proxy_size: [0.6, 0.6, 0.6]
+      trajs:
+        - traj_type: spline-trajectory
+          coords: [[0.30, 0.70, 0.5], [0.70, 0.70, 0.5]]
+          angle_offset: 0.
+    # Object 3
+    -
+      proxy_size: [0.3, 0.3, 0.3]
+      trajs:
+        - traj_type: spline-trajectory
+          coords: [[0.70, 0.30, 0.5], [0.30, 0.30, 0.5]]
+          angle_offset: 0.
+    # Object 4
+    -
+      proxy_size: [0.27, 0.27, 0.27]
+      # proxy_size: [0.2, 0.2, 0.2]
+      trajs:
+        - traj_type: static-trajectory
+          pos_start: [0.5, 0.5, 0.52]
+          angle_offset: 90.
+  prompt_processor:
+    prompt: ["a tiger walking", "a rhinoceros walking", "a firehydrant", "assassin riding a cow", "a deer walking"]
+  # First train each object independently and use this to render different trained models together
+  checkpoints: [
+    /path/to/a_tiger_walking@x/ckpts/last.ckpt,
+    /path/to/a_rhinoceros_walking@x/ckpts/last.ckpt,
+    /path/to/assassin_riding_a_cow@x/ckpts/last.ckpt,
+    /path/to/a_deer_walking@x/ckpts/last.ckpt,
+    /path/to/water_spraying_out_of_a_firehydrant@x/ckpts/last.ckpt,
+  ]

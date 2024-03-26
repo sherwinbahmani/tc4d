@@ -1,0 +1,12 @@
+name: "a_unicorn_running"
+config_scene:
+  traj_kwargs:
+    # Object 0
+    -
+      proxy_size: [0.5, 0.5, 0.5]
+      trajs:
+        - traj_type: spline-trajectory
+          coords: [[0.5, 0.7, 0.5], [0.5, 0.3, 0.5]]
+          angle_offset: 0.
+  prompt_processor:
+    prompt: ["a unicorn running"]

@@ -1,0 +1,12 @@
+name: "a_seagull_flying"
+config_scene:
+  traj_kwargs:
+    # Object 0
+    -
+      proxy_size: [0.5, 0.5, 0.5]
+      trajs:
+        - traj_type: spline-trajectory
+          coords: [[0.45, 0.25, 0.5], [0.30, 0.33, 0.5], [0.3, 0.4, 0.5], [0.75, 0.65, 0.5], [0.51, 0.75, 0.5], [0.45, 0.6, 0.5], [0.45, 0.5, 0.5], [0.45, 0.25, 0.5]]
+          angle_offset: 0.
+  prompt_processor:
+    prompt: ["a seagull flying"]

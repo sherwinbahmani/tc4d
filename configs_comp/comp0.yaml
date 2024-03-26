@@ -1,0 +1,43 @@
+name: "comp0"
+config_scene:
+  traj_kwargs:
+    # Object 0
+    -
+      proxy_size: [0.4, 0.4, 0.4]
+      trajs:
+        - traj_type: spline-trajectory
+          coords: [[0.25, 0.5, 0.5], [0.5, 0.75, 0.5], [0.75, 0.5, 0.5], [0.5, 0.25, 0.5], [0.25, 0.5, 0.5]]
+          angle_offset: 0.
+          time_offset: 0.
+    # Object 1
+    -
+      proxy_size: [0.5, 0.5, 0.5]
+      trajs:
+        - traj_type: spline-trajectory
+          coords: [[0.25, 0.5, 0.5], [0.5, 0.75, 0.5], [0.75, 0.5, 0.5], [0.5, 0.25, 0.5], [0.25, 0.5, 0.5]]
+          angle_offset: 0.
+          time_offset: 0.33
+    # Object 2
+    -
+      proxy_size: [0.5, 0.5, 0.5]
+      trajs:
+        - traj_type: spline-trajectory
+          coords: [[0.25, 0.5, 0.5], [0.5, 0.75, 0.5], [0.75, 0.5, 0.5], [0.5, 0.25, 0.5], [0.25, 0.5, 0.5]]
+          angle_offset: 0.
+          time_offset: 0.66
+    # Object 3
+    -
+      proxy_size: [0.4, 0.4, 0.4]
+      trajs:
+        - traj_type: static-trajectory
+          pos_start: [0.5, 0.5, 0.5]
+          angle_offset: 90.
+  prompt_processor:
+    prompt: ["a bear walking", "an astronaut riding a horse", "deadpool riding a cow", "a firepit"]
+  # First train each object independently and use this to render different trained models together
+  checkpoints: [
+    /path/to/a_bear_walking@x/ckpts/last.ckpt,
+    /path/to/an_astronaut_riding_a_horse@x/ckpts/last.ckpt,
+    /path/to/deadpool_riding_a_cow@x/ckpts/last.ckpt,
+    /path/to/a_firepit@x/ckpts/last.ckpt
+  ]

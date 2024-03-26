@@ -1,0 +1,12 @@
+name: "a_rhinoceros_walking"
+config_scene:
+  traj_kwargs:
+    # Object 0
+    -
+      proxy_size: [0.5, 0.5, 0.5]
+      trajs:
+        - traj_type: spline-trajectory
+          angle_offset: 0.
+          coords: [[0.5, 0.35, 0.5], [0.5, 0.65, 0.5]]
+  prompt_processor:
+    prompt: ["a rhinoceros walking"]

@@ -1,0 +1,15 @@
+name: "an_elephant_walking"
+config_scene:
+  traj_kwargs:
+    # Object 0
+    -
+      proxy_size: [0.5, 0.5, 0.5]
+      trajs:
+        - traj_type: spline-trajectory
+          # Single
+          coords: [[0.5, 0.35, 0.5], [0.5, 0.65, 0.5]]
+          # Compositional
+          # coords: [[0.25, 0.25, 0.5], [0.35, 0.6, 0.5], [0.5, 0.75, 0.5]]
+          angle_offset: 0.
+  prompt_processor:
+    prompt: ["an elephant walking"]

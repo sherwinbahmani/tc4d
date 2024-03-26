@@ -1,0 +1,13 @@
+name: "a_lamppost"
+config_scene:
+  traj_kwargs:
+    # Object 0
+    -
+      proxy_size: [0.5, 0.5, 0.5]
+      trajs:
+        - traj_type: static-trajectory
+          pos_start: [0.5, 0.5, 0.5]
+          angle_offset: 90.
+  prompt_processor:
+    prompt: ["a lamppost"]
+# Only train stage 1 and 2

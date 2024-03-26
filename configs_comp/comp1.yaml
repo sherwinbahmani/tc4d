@@ -1,0 +1,24 @@
+name: "comp1"
+config_scene:
+  traj_kwargs:
+    # Object 0
+    -
+      proxy_size: [0.5, 0.5, 0.5]
+      trajs:
+        - traj_type: spline-trajectory
+          coords: [[0.25, 0.25, 0.5], [0.35, 0.6, 0.5], [0.5, 0.75, 0.5]]
+          angle_offset: 0.
+    # Object 1
+    -
+      proxy_size: [0.5, 0.5, 0.6]
+      trajs:
+        - traj_type: spline-trajectory
+          coords: [[0.75, 0.75, 0.5], [0.6, 0.35, 0.5], [0.25, 0.5, 0.5]]
+          angle_offset: 0.
+  prompt_processor:
+    prompt: ["an elephant walking", "a giraffe walking"]
+  # First train each object independently and use this to render different trained models together
+  checkpoints: [
+    /path/to/an_elephant_walking@x/ckpts/last.ckpt,
+    /path/to/a_giraffe_walking@x/ckpts/last.ckpt,
+  ]

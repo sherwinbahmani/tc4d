@@ -1,0 +1,4 @@
+outputs
+experiments
+.threestudio_cache
+*.pyc
