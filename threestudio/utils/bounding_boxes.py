@@ -44,7 +44,7 @@ def voxelize(pc: torch.Tensor, voxel_size: int, grid_size=1., filter_outlier=Tru
         indices = indices[valid]
     
     if valid.sum() == 0:
-        return torch.zeros((b, voxel_size, voxel_size, voxel_size), device=pc.device, dtype=torch.bool)
+        return torch.zeros((b, voxel_size, voxel_size, voxel_size), device=pc.device, dtype=pc.dtype)
 
     def interpolate_scatter3d(pos):
         updates_raw = rr[pos[0]][..., 0] * rr[pos[1]][..., 1] * rr[pos[2]][..., 2]
