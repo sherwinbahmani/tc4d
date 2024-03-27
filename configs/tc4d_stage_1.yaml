@@ -168,7 +168,7 @@ system:
     lambda_orient: 0.
     lambda_sparsity: 100.
     lambda_opaque: 0.
-    lambda_z_variance: 10.
+    lambda_z_variance: 0.
     lambda_tv: 0.
     lambda_deformation: 0.
     lambda_elastic: 0.0
