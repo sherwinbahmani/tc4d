@@ -71,7 +71,6 @@ data:
 
 system_type: "tc4d-system"
 system:
-  weights_ignore_modules: ["renderer.base_renderer.estimators", "renderer.base_renderer.obj_trajs", "geometry.0.encoding.encoding.time_network", "geometry.0.encoding.encoding.encoding_time"]
   multi_obj: ${data.single_view.multi_obj}
   multi_rate_perc: ${data.multi_rate_perc}
   simultan_vid_mod_perc: ${data.single_view.simultan_vid_mod_perc}
