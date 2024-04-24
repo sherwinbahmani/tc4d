@@ -1,5 +1,7 @@
 # TC4D: Trajectory-Conditioned Text-to-4D Generation
 
+![Random Sample](./assets/tc4d.png)
+
 | [Project Page](https://sherwinbahmani.github.io/tc4d/) | [Paper](https://arxiv.org/abs/2403.17920) | [User Study Template](https://github.com/victor-rong/video-generation-study) |
 
 - **This code is forked from [threestudio](https://github.com/threestudio-project/threestudio).**
@@ -95,7 +97,7 @@ We provide 24 GB and 40 GB configs for stage 3, replace --config configs/tc4d_st
 
 ## Credits
 
-This code is built on the [threestudio-project](https://github.com/threestudio-project/threestudio), [MVDream-threestudio](https://github.com/bytedance/MVDream-threestudio), and [4D-fy-threestudio](https://github.com/sherwinbahmani/4dfy). Thanks to the maintainers for their contribution to the community!
+This code is built on the [threestudio-project](https://github.com/threestudio-project/threestudio), [MVDream-threestudio](https://github.com/bytedance/MVDream-threestudio), [4D-fy-threestudio](https://github.com/sherwinbahmani/4dfy), and [VideoCrafter](https://github.com/AILab-CVC/VideoCrafter). Thanks to the maintainers for their contribution to the community!
 
 ## Citing
 
