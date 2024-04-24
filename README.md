@@ -1,6 +1,6 @@
 # TC4D: Trajectory-Conditioned Text-to-4D Generation
 
-![Random Sample](./assets/tc4d.png)
+<img src="./assets/tc4d.png" width="512">
 
 | [Project Page](https://sherwinbahmani.github.io/tc4d/) | [Paper](https://arxiv.org/abs/2403.17920) | [User Study Template](https://github.com/victor-rong/video-generation-study) |
 
